@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <title>Privacy Policy — BuildProposal</title>
+  <meta name="description" content="Privacy policy for BuildProposal, the free online project proposal generator.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://buildproposal.co/privacy.html">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/" class="navbar-brand">📑 BuildProposal</a>
+    <div class="navbar-links" id="siteNav">
+      <a href="/about.html">About</a>
+    </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </nav>
+  <main style="max-width:720px;margin:3rem auto;padding:0 1.5rem;">
+    <h1 style="font-size:1.8rem;font-weight:800;color:var(--text-primary);margin-bottom:1rem;">Privacy Policy</h1>
+    <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:2rem;">Last updated: June 7, 2026</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:1.5rem 0 0.5rem;">1. What We Collect</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">BuildProposal runs entirely in your browser. The data you enter into the proposal form (names, addresses, pricing, scope, etc.) is processed locally to generate a live preview and PDF. We do not store, transmit, or retain your proposal data on our servers unless you explicitly sign in and choose to save.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:1.5rem 0 0.5rem;">2. Saved Documents</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">If you sign in with a Build ecosystem account, you may save proposals to your account. Saved proposals are stored in Firebase Firestore and are accessible only to you. You can delete your saved proposals at any time.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:1.5rem 0 0.5rem;">3. Analytics & Ads</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">We use Google AdSense for advertising. Google may use cookies to serve ads based on your browsing history. You can opt out of personalized ads at <a href="https://adssettings.google.com" style="color:var(--accent);">Google Ads Settings</a>. We do not use any other analytics or tracking services.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:1.5rem 0 0.5rem;">4. Cookies</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">BuildProposal itself does not set cookies. Third-party services (Google AdSense, Firebase Authentication) may set cookies as needed for their functionality.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:1.5rem 0 0.5rem;">5. Data Security</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">All connections use HTTPS encryption. Saved data is stored in Google Firebase with standard security practices. We do not sell, share, or transfer your data to third parties.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:1.5rem 0 0.5rem;">6. Your Rights</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">You can delete your saved proposals at any time from the saved proposals panel. To request deletion of your account and all associated data, contact us at the email below.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:1.5rem 0 0.5rem;">7. Contact</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;">For privacy questions: <a href="mailto:buildpdf.help@gmail.com" style="color:var(--accent);">buildpdf.help@gmail.com</a></p>
+  </main>
+  <footer class="site-footer">
+    <p>© 2026 BuildProposal · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p>
+  </footer>
+<script>
+    const navToggle = document.getElementById('navToggle');
+    const siteNav = document.getElementById('siteNav');
+    const headerInner = navToggle ? navToggle.closest('.navbar') : null;
+    function closeNav() {
+      siteNav.classList.remove('open'); navToggle.classList.remove('open');
+      document.body.style.overflow = '';
+      const btn = siteNav.querySelector('.nav-close'); if (btn) btn.remove();
+      setTimeout(() => headerInner.appendChild(siteNav), 300);
+    }
+    if (navToggle && siteNav && headerInner) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = siteNav.classList.contains('open');
+        if (!isOpen) {
+          document.body.appendChild(siteNav);
+          const closeBtn = document.createElement('button');
+          closeBtn.className = 'nav-close';
+          closeBtn.setAttribute('aria-label', 'Close menu');
+          closeBtn.innerHTML = '&#x2715;';
+          closeBtn.addEventListener('click', closeNav);
+          siteNav.prepend(closeBtn);
+          requestAnimationFrame(() => { siteNav.classList.add('open'); navToggle.classList.add('open'); });
+          document.body.style.overflow = 'hidden';
+        } else { closeNav(); }
+      });
+      siteNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+    }
+  </script>
+</body>
+</html>

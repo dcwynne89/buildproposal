@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <title>Terms of Service — BuildProposal</title>
+  <meta name="description" content="Terms of service for BuildProposal, the free online project proposal generator.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://buildproposal.co/terms.html">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/" class="navbar-brand">📑 BuildProposal</a>
+    <div class="navbar-links" id="siteNav">
+      <a href="/about.html">About</a>
+    </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </nav>
+  <main style="max-width:720px;margin:3rem auto;padding:0 1.5rem;">
+    <h1 style="font-size:1.8rem;font-weight:800;color:var(--text-primary);margin-bottom:1rem;">Terms of Service</h1>
+    <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:2rem;">Last updated: June 7, 2026</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:1.5rem 0 0.5rem;">1. Acceptance</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">By using BuildProposal ("the Service"), you agree to these Terms of Service. If you do not agree, do not use the Service.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:1.5rem 0 0.5rem;">2. Description of Service</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">BuildProposal is a free, browser-based project proposal generator. It allows you to create multi-section proposals with executive summary, scope of work, timeline, pricing, and terms, and generate PDF documents. The Service is provided "as is" without warranties of any kind.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:1.5rem 0 0.5rem;">3. User Content</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">You retain all rights to the content you create using BuildProposal. We do not claim ownership of your proposals, client information, or any other content you generate. You are solely responsible for the accuracy and legality of the content you create.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:1.5rem 0 0.5rem;">4. Acceptable Use</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">You agree not to use the Service for any unlawful purpose, to generate fraudulent or misleading documents, or to attempt to disrupt or compromise the Service's infrastructure.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:1.5rem 0 0.5rem;">5. Limitation of Liability</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">BuildProposal and its creators shall not be liable for any direct, indirect, incidental, or consequential damages arising from your use of the Service. The proposals generated are not legal documents unless treated as such by all parties involved.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:1.5rem 0 0.5rem;">6. Availability</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">We make reasonable efforts to keep the Service available but do not guarantee uninterrupted access. We reserve the right to modify, suspend, or discontinue the Service at any time without notice.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:1.5rem 0 0.5rem;">7. Changes to Terms</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">We may update these terms from time to time. Continued use of the Service after changes constitutes acceptance of the revised terms.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:1.5rem 0 0.5rem;">8. Contact</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;">Questions? <a href="mailto:buildpdf.help@gmail.com" style="color:var(--accent);">buildpdf.help@gmail.com</a></p>
+  </main>
+  <footer class="site-footer">
+    <p>© 2026 BuildProposal · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p>
+  </footer>
+<script>
+    const navToggle = document.getElementById('navToggle');
+    const siteNav = document.getElementById('siteNav');
+    const headerInner = navToggle ? navToggle.closest('.navbar') : null;
+    function closeNav() {
+      siteNav.classList.remove('open'); navToggle.classList.remove('open');
+      document.body.style.overflow = '';
+      const btn = siteNav.querySelector('.nav-close'); if (btn) btn.remove();
+      setTimeout(() => headerInner.appendChild(siteNav), 300);
+    }
+    if (navToggle && siteNav && headerInner) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = siteNav.classList.contains('open');
+        if (!isOpen) {
+          document.body.appendChild(siteNav);
+          const closeBtn = document.createElement('button');
+          closeBtn.className = 'nav-close';
+          closeBtn.setAttribute('aria-label', 'Close menu');
+          closeBtn.innerHTML = '&#x2715;';
+          closeBtn.addEventListener('click', closeNav);
+          siteNav.prepend(closeBtn);
+          requestAnimationFrame(() => { siteNav.classList.add('open'); navToggle.classList.add('open'); });
+          document.body.style.overflow = 'hidden';
+        } else { closeNav(); }
+      });
+      siteNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+    }
+  </script>
+</body>
+</html>

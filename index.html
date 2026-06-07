@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <title>BuildProposal — Free Project Proposal Generator | Create PDF Proposals Online</title>
+  <meta name="description" content="Generate professional PDF project proposals for free. Add executive summary, detailed scope, timeline, pricing, and terms. Download instantly. No signup required. Optionally sign in to save your work.">
+  <meta name="keywords" content="free proposal generator, project proposal maker, PDF proposal, proposal template, freelance proposal, agency proposal, scope of work">
+  <meta name="author" content="BuildProposal">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://buildproposal.co/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6010936774105671" crossorigin="anonymous"></script>
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="BuildProposal">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="BuildProposal — Free Project Proposal Generator">
+  <meta property="og:description" content="Generate professional PDF project proposals for free. No signup required.">
+  <meta property="og:url" content="https://buildproposal.co/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://buildproposal.co/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BuildProposal — Free Project Proposal Generator">
+  <meta name="twitter:description" content="Create professional PDF project proposals instantly. Free, no signup.">
+  <meta name="twitter:image" content="https://buildproposal.co/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "BuildProposal",
+    "url": "https://buildproposal.co",
+    "description": "Free online project proposal generator. Create multi-section proposals with executive summary, scope, timeline, pricing, and terms. Download as professional PDF.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "featureList": [
+      "Executive summary section",
+      "Multi-section scope of work",
+      "Timeline and milestones",
+      "Pricing table with tax and discount",
+      "Terms and acceptance signature",
+      "Live preview as you type",
+      "Custom accent color",
+      "No signup required"
+    ],
+    "creator": { "@type": "Organization", "name": "BuildProposal", "url": "https://buildproposal.co" }
+  }
+  </script>
+  <script src="/build-ecosystem-bar.js" defer></script>
+  <script src="/build-ecosystem-auth.js" defer></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="/" class="navbar-brand">📑 BuildProposal</a>
+    <div class="navbar-links" id="siteNav">
+      <a href="/about.html">About</a>
+    </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="hero-banner">
+    <h1>Win the Project Before They Read the Price</h1>
+    <p>A compelling proposal sells the outcome, not just the deliverables. Add context, set expectations, present pricing — and close the deal with a document that looks as good as your work.</p>
+  </section>
+
+  <main class="app-container">
+
+    <!-- ── FORM PANEL ── -->
+    <div class="form-panel" id="formPanel">
+
+      <!-- Your Info -->
+      <div class="form-section">
+        <div class="form-section-header"><h3>📋 Your Information</h3></div>
+        <div class="form-body">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fromName">Company / Your Name *</label>
+              <input type="text" id="fromName" placeholder="Acme Consulting" required>
+            </div>
+            <div class="form-group">
+              <label for="fromEmail">Email</label>
+              <input type="email" id="fromEmail" placeholder="proposals@acme.com">
+            </div>
+          </div>
+          <div class="form-row full">
+            <div class="form-group">
+              <label for="fromStreet">Street Address</label>
+              <input type="text" id="fromStreet" placeholder="123 Main St">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fromCity">City</label>
+              <input type="text" id="fromCity" placeholder="Austin">
+            </div>
+            <div class="form-group">
+              <label for="fromState">State</label>
+              <input type="text" id="fromState" placeholder="TX" maxlength="2">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fromPhone">Phone</label>
+              <input type="tel" id="fromPhone" placeholder="(555) 123-4567">
+            </div>
+            <div class="form-group">
+              <label for="accentColor">Accent Color</label>
+              <div class="color-row">
+                <input type="color" id="accentColor" value="#8b5cf6">
+                <input type="text" id="accentColorHex" value="#8b5cf6" style="flex:1" readonly>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Client Info -->
+      <div class="form-section">
+        <div class="form-section-header"><h3>👤 Prepared For</h3></div>
+        <div class="form-body">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="toName">Client Name *</label>
+              <input type="text" id="toName" placeholder="Jane Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="toEmail">Client Email</label>
+              <input type="email" id="toEmail" placeholder="jane@client.com">
+            </div>
+          </div>
+          <div class="form-row full">
+            <div class="form-group">
+              <label for="toStreet">Street Address</label>
+              <input type="text" id="toStreet" placeholder="456 Oak Ave">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="toCity">City</label>
+              <input type="text" id="toCity" placeholder="Denver">
+            </div>
+            <div class="form-group">
+              <label for="toState">State / ZIP</label>
+              <input type="text" id="toState" placeholder="CO 80202">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proposal Details -->
+      <div class="form-section">
+        <div class="form-section-header"><h3>📄 Proposal Details</h3></div>
+        <div class="form-body">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="proposalNumber">Proposal Number</label>
+              <input type="text" id="proposalNumber" placeholder="PRP-001" value="PRP-001">
+            </div>
+            <div class="form-group">
+              <label for="currency">Currency Symbol</label>
+              <input type="text" id="currency" placeholder="$" value="$" maxlength="3">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="proposalDate">Proposal Date</label>
+              <input type="date" id="proposalDate">
+            </div>
+            <div class="form-group">
+              <label for="validUntil">Valid Until</label>
+              <input type="date" id="validUntil">
+            </div>
+          </div>
+          <div class="form-row full">
+            <div class="form-group">
+              <label for="projectName">Project / Engagement Name *</label>
+              <input type="text" id="projectName" placeholder="Website Redesign & Digital Strategy" required>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Executive Summary -->
+      <div class="form-section proposal-section">
+        <div class="form-section-header"><h3>📝 Executive Summary</h3></div>
+        <div class="form-body">
+          <div class="form-group">
+            <label for="executiveSummary">Explain the problem and your proposed solution</label>
+            <textarea id="executiveSummary" rows="5" placeholder="We understand that [client] is looking to [objective]. Based on our initial conversations, the core challenge is [problem]. We propose [solution] that will [key benefit]. This document outlines our approach, timeline, and investment required."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scope of Work -->
+      <div class="form-section">
+        <div class="form-section-header"><h3>🔧 Scope of Work</h3></div>
+        <div class="form-body">
+          <div id="scopeSections"></div>
+          <button type="button" class="btn-add-item" id="btnAddScope" style="margin:0;width:100%;">+ Add Scope Section</button>
+        </div>
+      </div>
+
+      <!-- Timeline / Milestones -->
+      <div class="form-section">
+        <div class="form-section-header"><h3>📅 Timeline / Milestones</h3></div>
+        <div class="form-body">
+          <div class="milestone-header">
+            <span>Phase</span><span>Duration</span><span>Target Date</span><span></span>
+          </div>
+          <div id="milestones"></div>
+          <button type="button" class="btn-add-item" id="btnAddMilestone" style="margin:0;width:100%;">+ Add Milestone</button>
+        </div>
+      </div>
+
+      <!-- Pricing (Line Items) -->
+      <div class="form-section">
+        <div class="form-section-header"><h3>💰 Pricing</h3></div>
+        <div class="line-items-header">
+          <span>Description</span><span>Qty</span><span>Rate</span><span>Amount</span><span></span>
+        </div>
+        <div id="lineItems"></div>
+        <button type="button" class="btn-add-item" id="btnAddItem">+ Add Line Item</button>
+        <div class="form-body" style="padding-top:0;">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="taxRate">Tax Rate (%)</label>
+              <input type="number" id="taxRate" placeholder="0" value="0" min="0" max="100" step="0.01">
+            </div>
+            <div class="form-group">
+              <label for="discount">Discount ($)</label>
+              <input type="number" id="discount" placeholder="0" value="0" min="0" step="0.01">
+            </div>
+          </div>
+          <div class="totals-display" id="totalsDisplay">
+            <div class="totals-row"><span>Subtotal</span><span id="dispSubtotal">$0.00</span></div>
+            <div class="totals-row"><span>Tax</span><span id="dispTax">$0.00</span></div>
+            <div class="totals-row"><span>Discount</span><span id="dispDiscount">-$0.00</span></div>
+            <div class="totals-row total"><span>Proposal Total</span><span id="dispTotal">$0.00</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Terms & Conditions -->
+      <div class="form-section proposal-section">
+        <div class="form-section-header"><h3>📝 Terms & Conditions</h3></div>
+        <div class="form-body">
+          <div class="form-group">
+            <label for="terms">Terms</label>
+            <textarea id="terms" rows="3" placeholder="Payment terms: 50% deposit upon acceptance, 25% at midpoint milestone, 25% upon final delivery. All work remains property of the provider until paid in full."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="acceptanceClause">Acceptance Clause</label>
+            <textarea id="acceptanceClause" rows="2">This proposal is valid until the date shown above. To accept, sign below and return a copy.</textarea>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:0.75rem;">
+        <button type="button" class="btn-download" id="btnDownload" style="flex:1;">⬇ Download Proposal PDF</button>
+      </div>
+    </div>
+
+    <!-- ── PREVIEW PANEL ── -->
+    <div class="preview-panel" id="previewPanel">
+      <div class="preview-header">
+        <h3>📄 Live Preview</h3>
+        <span class="preview-badge">Updates as you type</span>
+      </div>
+      <div class="preview-body" id="previewBody"></div>
+    </div>
+
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <!-- ── SEO Content ── -->
+  <section style="max-width:860px;margin:3rem auto;padding:0 1.5rem 1rem;">
+    <h2 style="font-size:1.3rem;font-weight:700;color:var(--text-primary);margin-bottom:1.5rem;border-bottom:1px solid var(--border);padding-bottom:0.5rem;">Why Use BuildProposal?</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-bottom:2.5rem;">
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;">
+        <div style="font-size:1.5rem;margin-bottom:0.5rem;">🎯</div>
+        <h3 style="color:var(--text-primary);font-size:0.95rem;font-weight:700;margin-bottom:0.4rem;">Persuasion, Not Just Pricing</h3>
+        <p style="color:var(--text-secondary);font-size:0.85rem;line-height:1.6;">A proposal explains why, not just what. The executive summary sells the outcome before the client ever sees the numbers.</p>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;">
+        <div style="font-size:1.5rem;margin-bottom:0.5rem;">📐</div>
+        <h3 style="color:var(--text-primary);font-size:0.95rem;font-weight:700;margin-bottom:0.4rem;">Detail That Builds Confidence</h3>
+        <p style="color:var(--text-secondary);font-size:0.85rem;line-height:1.6;">Scope sections, milestones, and deliverables show the client you've thought the project through — and that you can deliver.</p>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;">
+        <div style="font-size:1.5rem;margin-bottom:0.5rem;">✨</div>
+        <h3 style="color:var(--text-primary);font-size:0.95rem;font-weight:700;margin-bottom:0.4rem;">Professional Without the Overhead</h3>
+        <p style="color:var(--text-secondary);font-size:0.85rem;line-height:1.6;">No design tools, no paid templates. Fill in the form, preview live, and download a polished PDF that matches your brand colors.</p>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;">
+        <div style="font-size:1.5rem;margin-bottom:0.5rem;">🔄</div>
+        <h3 style="color:var(--text-primary);font-size:0.95rem;font-weight:700;margin-bottom:0.4rem;">Proposal → Quote → Invoice</h3>
+        <p style="color:var(--text-secondary);font-size:0.85rem;line-height:1.6;">BuildProposal is part of the Build ecosystem. Once approved, use <a href="https://buildquotes.co" style="color:var(--accent);">BuildQuotes</a> and <a href="https://buildinvoice.co" style="color:var(--accent);">BuildInvoice</a> to continue the workflow.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Pro Tips ── -->
+  <section style="max-width:900px;margin:0 auto;padding:2.5rem 2rem 0;">
+    <h2 style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);margin-bottom:1.25rem;">📌 What Makes a Proposal Actually Win Business</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;">
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.1rem 1.25rem;">
+        <p style="font-size:0.82rem;font-weight:700;color:var(--text-primary);margin-bottom:0.35rem;">Lead with the problem, not with yourself</p>
+        <p style="font-size:0.8rem;color:var(--text-secondary);line-height:1.6;">Clients want to know you understand their challenge. Open your executive summary with what they're struggling with, not your company bio.</p>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.1rem 1.25rem;">
+        <p style="font-size:0.82rem;font-weight:700;color:var(--text-primary);margin-bottom:0.35rem;">Break scope into phases they can follow</p>
+        <p style="font-size:0.8rem;color:var(--text-secondary);line-height:1.6;">Numbered scope sections with deliverables give clients a mental roadmap. They stop asking "what am I paying for?" because you showed them.</p>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.1rem 1.25rem;">
+        <p style="font-size:0.82rem;font-weight:700;color:var(--text-primary);margin-bottom:0.35rem;">Include a timeline — even a rough one</p>
+        <p style="font-size:0.8rem;color:var(--text-secondary);line-height:1.6;">A proposal without a timeline feels like a wish list. Milestones show you've planned the work and give the client something to hold you to.</p>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.1rem 1.25rem;">
+        <p style="font-size:0.82rem;font-weight:700;color:var(--text-primary);margin-bottom:0.35rem;">Put pricing at the end, not the beginning</p>
+        <p style="font-size:0.8rem;color:var(--text-secondary);line-height:1.6;">By the time the client reaches the pricing table, they should already be sold on the approach. That's the entire point of a proposal over a plain quote.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <div style="max-width:860px;margin:0 auto 1.25rem;padding:0 1.5rem;">
+      <p style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--accent);margin-bottom:0.6rem;">Also from the Build ecosystem</p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.75rem;">
+        <a href="https://buildpdf.co" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.35rem 0.85rem;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:6px;font-size:0.8rem;color:var(--text-secondary);text-decoration:none;">📄 <strong style="color:var(--text-primary);">BuildPDF</strong> — Free file-to-PDF converter</a>
+        <a href="https://buildinvoice.co" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.35rem 0.85rem;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:6px;font-size:0.8rem;color:var(--text-secondary);text-decoration:none;">⚡ <strong style="color:var(--text-primary);">BuildInvoice</strong> — Free PDF invoice generator</a>
+        <a href="https://buildquotes.co" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.35rem 0.85rem;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:6px;font-size:0.8rem;color:var(--text-secondary);text-decoration:none;">💼 <strong style="color:var(--text-primary);">BuildQuotes</strong> — Free price quote generator</a>
+        <a href="https://buildcertificates.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.35rem 0.85rem;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:6px;font-size:0.8rem;color:var(--text-secondary);text-decoration:none;">🏅 <strong style="color:var(--text-primary);">BuildCertificates</strong> — Free certificate generator</a>
+        <a href="https://buildchangeorder.co" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.35rem 0.85rem;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:6px;font-size:0.8rem;color:var(--text-secondary);text-decoration:none;">📋 <strong style="color:var(--text-primary);">BuildChangeOrder</strong> — Free change order generator</a>
+      </div>
+    </div>
+    <p>© 2026 BuildProposal · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p>
+  </footer>
+
+  <script src="proposal-app.js"></script>
+  <script src="proposal-save-integration.js" defer></script>
+<script>
+    const navToggle = document.getElementById('navToggle');
+    const siteNav = document.getElementById('siteNav');
+    const headerInner = navToggle ? navToggle.closest('.navbar') : null;
+    function closeNav() {
+      siteNav.classList.remove('open'); navToggle.classList.remove('open');
+      document.body.style.overflow = '';
+      const btn = siteNav.querySelector('.nav-close'); if (btn) btn.remove();
+      setTimeout(() => headerInner.appendChild(siteNav), 300);
+    }
+    if (navToggle && siteNav && headerInner) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = siteNav.classList.contains('open');
+        if (!isOpen) {
+          document.body.appendChild(siteNav);
+          const closeBtn = document.createElement('button');
+          closeBtn.className = 'nav-close';
+          closeBtn.setAttribute('aria-label', 'Close menu');
+          closeBtn.innerHTML = '&#x2715;';
+          closeBtn.addEventListener('click', closeNav);
+          siteNav.prepend(closeBtn);
+          requestAnimationFrame(() => { siteNav.classList.add('open'); navToggle.classList.add('open'); });
+          document.body.style.overflow = 'hidden';
+        } else { closeNav(); }
+      });
+      siteNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+    }
+  </script>
+</body>
+</html>
