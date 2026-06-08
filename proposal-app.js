@@ -429,7 +429,48 @@ function downloadProposal() {
   if (!data.to.name)       { showToast("Enter a client name to generate a proposal.", "error"); return; }
   if (!data.proposal.project) { showToast("Enter a project name to generate a proposal.", "error"); return; }
 
-  showToast("📄 PDF generation coming soon — preview your proposal above!", "success");
+  isGenerating = true;
+  $("btnDownload").disabled = true;
+  $("btnDownload").textContent = "Generating...";
+
+  const previewHTML = renderPreviewHTML(data);
+  const filename = `proposal-${(data.to.name || 'document').replace(/\s+/g, '-').toLowerCase()}-${data.proposal.number || 'PRP-001'}.pdf`;
+
+  const printWindow = window.open('', '_blank');
+  printWindow.document.write(`
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>${filename}</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+      <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #fff; }
+        @media print {
+          body { margin: 0; }
+          @page { size: letter; margin: 0.5in; }
+        }
+      </style>
+    </head>
+    <body>
+      ${previewHTML}
+      <script>
+        // Wait for fonts to load then print
+        document.fonts.ready.then(function() {
+          setTimeout(function() { window.print(); }, 300);
+        });
+      </script>
+    </body>
+    </html>
+  `);
+  printWindow.document.close();
+
+  isGenerating = false;
+  $("btnDownload").disabled = false;
+  $("btnDownload").textContent = "\u2b07 Download Proposal PDF";
+  showToast("Proposal ready \u2014 use Save as PDF in the print dialog", "success");
 }
 
 // ── Helpers ───────────────────────────────────────────────────
